@@ -38,7 +38,7 @@ export default function Home() {
       const imageUrl = await query(input);
       setImgUrl(imageUrl);
     } catch (error) {
-      console.log("==========error========", error);
+      console.log("==========error===========", error);
     } finally {
       setLoading(false);
     }
@@ -60,7 +60,7 @@ export default function Home() {
           onClick={onClickHandler}
           disabled={loading}
         >
-          {loading ? "Generating Image..." : "Generate Image"}
+          {loading ? "Generating ..." : "Generate Image"}
         </button>
         {loading && <p className="text-center mt-4 text-gray-500">Generating...</p>}
       </div>
